@@ -1,0 +1,25 @@
+services:
+  jupyter:
+    build: .
+    runtime: amd
+#    devices:
+#      - /dev/kfd
+#      - /dev/dri
+#    shm_size: 16G
+#    group_add:
+#      - video
+#    cap_add:
+#      - SYS_PTRACE
+#    security_opt:
+#      - seccomp=unconfined
+    volumes:
+      - ./notebooks:/notebooks
+      - ./notebooks/libs:/notebooks/libs
+      - ./notebooks/data:/notebooks/data
+    ports:
+      - "8888:8888"         # Exponer puerto 8888 del contenedor al host
+    environment:
+      - JUPYTER_TOKEN=secret  # Token para acceder al notebook
+      - AMD_VISIBLE_DEVICES=all
+      - PER_PROCESS_GPU_MEMORY_FRACTION=0.5
+    command: ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
