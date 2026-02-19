@@ -11,7 +11,7 @@ from scipy import stats
 from statsmodels.tsa.seasonal import seasonal_decompose
 
 # --- Config ---
-INPUT_FILE = "CGR1.xlsx"
+INPUT_FILE = "data/CGR.xlsx"
 DATA_COLUMNS = [
     'tmax(degC)',
     'tmin(degC)',
