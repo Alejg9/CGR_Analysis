@@ -18,7 +18,8 @@ RUN apt-get update && \
         openpyxl \
         plotly \
         statsmodels \
-        prophet
+        prophet \
+        pyarrow
 
 # Crear directorio para notebooks (si no existe)
 RUN mkdir -p /notebooks /notebooks/libs /notebooks/data

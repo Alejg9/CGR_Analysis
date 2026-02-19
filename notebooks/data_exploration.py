@@ -21,12 +21,13 @@ DATA_COLUMNS = [
     'q(mm)',
     'soil(mm)'
 ]
-OUTPUT_DIR = "eda_outputs"
+OUTPUT_DIR = "data/exploration_outputs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # --- Funciones auxiliares ---
 def to_datetime_from_yyyymm(series):
-    s = series.astype(str)
+
+    s = series#.dtype(str)
     return pd.to_datetime(s + "01", format="%Y%m%d")
 
 def basic_stats(arr):
@@ -147,6 +148,7 @@ def fit_distribution_and_tests(data, dist_name, bins=20):
 # --- Gráficos ---
 def plot_timeseries_and_decomposition(series, name, outdir):
     fig, ax = plt.subplots(2,1, figsize=(12,8), gridspec_kw={"height_ratios":[2,1]})
+
     series.plot(ax=ax[0], title=f"{name} - time series")
     series.rolling(window=12, min_periods=1).mean().plot(ax=ax[0], label="MA(12)")
     ax[0].legend()
@@ -194,13 +196,16 @@ def plot_histogram_with_fits(sample, name, fit_results, outdir):
 
 # --- Pipeline principal ---
 def analyze(raw_df, data_columns, output_dir):
-    try:
-        pandas_dates = to_datetime_from_yyyymm(raw_df["Date"].to_numpy())
-    except:
-        pandas_dates = pd.to_datetime(raw_df["Date"].to_pandas(), errors="coerce")
+    # try:
+    pandas_dates = to_datetime_from_yyyymm(raw_df["Fecha"])
+    #     print(pandas_dates)
+    # except:
+    #     pandas_dates = pd.to_datetime(raw_df["Fecha"].to_pandas(), errors="coerce")
 
     pdf = raw_df.to_pandas().copy()
+    print(pdf.head())
     pdf.index = pd.DatetimeIndex(pandas_dates)
+    print(pdf.head())
     results_summary = {}
 
     for col in data_columns:

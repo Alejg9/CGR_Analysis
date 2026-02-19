@@ -1,0 +1,128 @@
+{
+  "tmax(degC)": {
+    "basic_stats": {
+      "count": 780,
+      "mean": 29.435935897435897,
+      "median": 29.9,
+      "std": 1.8601028367484638,
+      "min": 23.35,
+      "max": 33.59,
+      "iqr": 2.724999999999998,
+      "skew": -0.6534512463131096,
+      "kurtosis": -0.28050232923048846
+    },
+    "outliers_iqr_count": 3,
+    "outliers_z_count": 1,
+    "fits": {},
+    "timeseries_plot": "data/exploration_outputs/tmaxdegC_timeseries_decomp.png",
+    "hist_cdf_plot": "data/exploration_outputs/tmaxdegC_hist_cdf.png"
+  },
+  "tmin(degC)": {
+    "basic_stats": {
+      "count": 780,
+      "mean": 18.314692307692308,
+      "median": 18.97,
+      "std": 2.346147095840208,
+      "min": 11.09,
+      "max": 23.05,
+      "iqr": 3.4674999999999976,
+      "skew": -0.6832768456387945,
+      "kurtosis": -0.39948990836166587
+    },
+    "outliers_iqr_count": 3,
+    "outliers_z_count": 2,
+    "fits": {},
+    "timeseries_plot": "data/exploration_outputs/tmindegC_timeseries_decomp.png",
+    "hist_cdf_plot": "data/exploration_outputs/tmindegC_hist_cdf.png"
+  },
+  "ppt(mm)": {
+    "basic_stats": {
+      "count": 780,
+      "mean": 119.50205128205128,
+      "median": 107.5,
+      "std": 82.03315461050114,
+      "min": 0.4,
+      "max": 446.1,
+      "iqr": 114.45000000000002,
+      "skew": 0.8536336333496028,
+      "kurtosis": 0.6162404687425891
+    },
+    "outliers_iqr_count": 13,
+    "outliers_z_count": 6,
+    "fits": {},
+    "timeseries_plot": "data/exploration_outputs/pptmm_timeseries_decomp.png",
+    "hist_cdf_plot": "data/exploration_outputs/pptmm_hist_cdf.png"
+  },
+  "ws(mps)": {
+    "basic_stats": {
+      "count": 780,
+      "mean": 2.8273076923076927,
+      "median": 2.81,
+      "std": 0.5117910684629691,
+      "min": 1.51,
+      "max": 4.3,
+      "iqr": 0.71,
+      "skew": -0.10946111427529878,
+      "kurtosis": -0.34241781216031475
+    },
+    "outliers_iqr_count": 1,
+    "outliers_z_count": 0,
+    "fits": {},
+    "timeseries_plot": "data/exploration_outputs/wsmps_timeseries_decomp.png",
+    "hist_cdf_plot": "data/exploration_outputs/wsmps_hist_cdf.png"
+  },
+  "aet(mm)": {
+    "basic_stats": {
+      "count": 780,
+      "mean": 89.25653846153847,
+      "median": 102.0,
+      "std": 37.61153642451869,
+      "min": 1.7,
+      "max": 154.0,
+      "iqr": 53.14999999999999,
+      "skew": -0.7267539919266045,
+      "kurtosis": -0.6093731610253137
+    },
+    "outliers_iqr_count": 0,
+    "outliers_z_count": 0,
+    "fits": {},
+    "timeseries_plot": "data/exploration_outputs/aetmm_timeseries_decomp.png",
+    "hist_cdf_plot": "data/exploration_outputs/aetmm_hist_cdf.png"
+  },
+  "q(mm)": {
+    "basic_stats": {
+      "count": 780,
+      "mean": 30.292435897435894,
+      "median": 5.4,
+      "std": 52.426794800535944,
+      "min": 0.0,
+      "max": 348.0,
+      "iqr": 30.475000000000005,
+      "skew": 2.387069996637022,
+      "kurtosis": 6.019609855152348
+    },
+    "outliers_iqr_count": 115,
+    "outliers_z_count": 19,
+    "fits": {},
+    "timeseries_plot": "data/exploration_outputs/qmm_timeseries_decomp.png",
+    "hist_cdf_plot": "data/exploration_outputs/qmm_hist_cdf.png"
+  },
+  "soil(mm)": {
+    "basic_stats": {
+      "count": 780,
+      "mean": 22.951153846153847,
+      "median": 15.6,
+      "std": 15.648900881381403,
+      "min": 3.3,
+      "max": 42.3,
+      "iqr": 34.025,
+      "skew": 0.2388188614837667,
+      "kurtosis": -1.7253456611713922
+    },
+    "outliers_iqr_count": 0,
+    "outliers_z_count": 0,
+    "fits": {},
+    "timeseries_plot": "data/exploration_outputs/soilmm_timeseries_decomp.png",
+    "hist_cdf_plot": "data/exploration_outputs/soilmm_hist_cdf.png"
+  }
+}
